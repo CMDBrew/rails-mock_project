@@ -1,0 +1,15 @@
+@function adjust-text-color($color, $type: normal) {
+  @if($type == normal) {
+    @if(lightness($color) > $color-adjust-intensity) {
+      @return $text-color-primary;
+    } @else {
+      @return $text-color-primary-inverse;
+    }
+  } @elseif($type == secondary) {
+    @if(lightness($color) > $color-adjust-intensity) {
+      @return $text-color-secondary;
+    } @else {
+      @return $text-color-secondary-inverse;
+    }
+  }
+}

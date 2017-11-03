@@ -1,0 +1,48 @@
+// Custom Grid Component
+.flex-wrap {
+  display: flex;
+
+  &.flex-wrap__row {
+    flex-direction: row;
+  }
+
+  &.flex-wrap__column {
+    flex-direction: column;
+  }
+
+  &.flex-wrap__justify-center {
+    justify-content: center;
+  }
+
+  &.flex-wrap__align-center {
+    align-items: center;
+  }
+}
+
+.flex-col {
+  position: relative;
+  @for $_i from 0 through 12 {
+    &.flex-col__#{$_i} {
+      flex: $_i;
+    }
+  }
+}
+@include mobile {
+  .flex-wrap {
+    &.flex-wrap__column-xs {
+      flex-direction: column;
+    }
+
+    &.flex-wrap__row-xs {
+      flex-direction: row;
+    }
+  }
+
+  .flex-col {
+    @for $_i from 0 through 12 {
+      &.flex-col__#{$_i}-xs {
+        flex: $_i;
+      }
+    }
+  }
+}
