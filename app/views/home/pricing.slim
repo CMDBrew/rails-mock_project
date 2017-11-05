@@ -1,0 +1,48 @@
+section.jumbotron[id='hero']
+  .container
+    .row.text-center
+      .col-md-12
+        h1= t('.hero.title')
+
+section[id='pricings']
+  .container
+    .row.text-center
+      h2= t('.pricings.title')
+    .row
+      .col-md-6.col-md-offset-3
+        ul.nav.nav-tabs[role="tablist"]
+          li.active[role="presentation"]
+            a[href="#basic" aria-controls="basic" role="tab" data-toggle="tab"]
+              = t('.pricings.basic.title')
+          li[role="presentation"]
+            a[href="#advance" aria-controls="advance" role="tab" data-toggle="tab"]
+              = t('.pricings.advance.title')
+        .tab-content
+          #basic.tab-pane.active[role="tabpanel"]
+            h1.text-center
+              | $ 199
+              sub
+                | / mo
+            br/
+            ul
+              li Lorem ipsum dolor sit amet
+              li Lorem ipsum dolor sit amet
+              li Lorem ipsum dolor sit amet
+              li Lorem ipsum dolor sit amet
+            br/
+            .text-center
+              = link_to t('.pricings.basic.link'), '#', class: 'btn btn-info'
+          #advance.tab-pane[role="tabpanel"]
+            h1.text-center
+              | $ 399
+              sub
+                | / mo
+            br/
+            ul
+              li Lorem ipsum dolor sit amet
+              li Lorem ipsum dolor sit amet
+              li Lorem ipsum dolor sit amet
+              li Lorem ipsum dolor sit amet
+            br/
+            .text-center
+              = link_to t('.pricings.advance.link'), '#', class: 'btn btn-info'

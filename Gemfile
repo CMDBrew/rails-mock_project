@@ -44,6 +44,7 @@ gem 'material_active_admin',
 gem 'font-awesome-rails'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 # Use Bootstrap as the CSS framework
 gem 'bootstrap-sass', '~> 3.2.0.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -83,6 +84,9 @@ gem 'responsive_images'
 # Mailchimp Mailer
 gem 'gibbon'
 gem 'mandrill-api'
+
+# Image Placeholder
+gem 'holder_rails'
 
 # Rails 5 missing gem support
 # gem 'activemodel-serializers-xml', git: 'https://github.com/rails/activemodel-serializers-xml'

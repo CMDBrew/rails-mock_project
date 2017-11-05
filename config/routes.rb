@@ -6,7 +6,6 @@ Rails.application.routes.draw do
     get code, to: 'errors#show', code: code
   end
 
-  get '/about'   => 'home#about',   as: :about
   get '/pricing' => 'home#pricing', as: :pricing
 
   root 'home#index'

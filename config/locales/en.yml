@@ -5,6 +5,34 @@ en:
       about: ABOUT
       pricing: PRICING
       pricing/basic: Basic Package
-      pricing/advanced: Advanced Package
+      pricing/advance: Advance Package
     footer:
       copyright: '%{year} © Clever Banana Studios Inc. All Rights Reserved.'
+
+  home:
+    index:
+      hero:
+        title: WELCOME!
+        body: Duis vehicula id mi et fringilla. Morbi a sapien nec orci vestibulum convallis a sed orci. Vivamus aliquet felis lorem, sit amet commodo erat consectetur vitae. Morbi ultrices auctor diam, et iaculis quam accumsan vitae.
+        link: PRIME BUTTON
+      about:
+        title: About Us
+        context:
+          title: About Us - Duis vehicula id mi et fringilla.
+          body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a ante id arcu varius fermentum sed eget elit. Suspendisse ut hendrerit neque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla tristique tempor magna eget posuere. Sed quis tellus interdum, molestie nisi et, pharetra ligula. Pellentesque blandit malesuada gravida. Duis nisl leo, ornare non ultricies in, vehicula vel tellus. In risus eros, luctus ac rutrum feugiat, tempus et nulla. Curabitur ut sollicitudin leo, sagittis congue diam. Donec dignissim vel ante nec posuere. Vivamus efficitur consectetur sem et egestas. Ut pharetra interdum nulla, et bibendum dolor sagittis in.
+      news:
+        title: Recent News
+      faqs:
+        title: FAQs
+
+    pricing:
+      hero:
+        title: Pricing
+      pricings:
+        title: Select The Right Package For You
+        basic:
+          title: Basic
+          link: SEC. BUTTON
+        advance:
+          title: Advance
+          link: SEC. BUTTON
