@@ -1,0 +1,9 @@
+section[id='faqs']
+  .container
+    .row.text-center
+      .col-md-12
+        h2= t('.title')
+    .row
+      .col-md-12
+        #faqs.panel-group[role="tablist" aria-multiselectable="true"]
+          = render @faqs

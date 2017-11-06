@@ -10,6 +10,7 @@ en:
       pricing: PRICING
       pricing/basic: Basic Package
       pricing/advance: Advance Package
+      faqs: FAQS
     footer:
       copyright: '%{year} © Clever Banana Studios Inc. All Rights Reserved.'
 
@@ -40,3 +41,7 @@ en:
         advance:
           title: Advance
           link: SEC. BUTTON
+
+  faqs:
+    index:
+      title: FAQs

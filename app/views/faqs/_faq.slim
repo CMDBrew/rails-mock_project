@@ -1,0 +1,8 @@
+.panel.panel-default
+  .panel-heading[id="heading_#{dom_id(faq)}" role="tab"]
+    h4.panel-title
+      a[role="button" data-toggle="collapse" data-parent="#faqs" href="##{dom_id(faq)}" aria-expanded=faq_counter.zero? aria-controls=dom_id(faq)]
+        = "#{faq_counter + 1}. #{faq.question}"
+  .panel-collapse.collapse[id=dom_id(faq) class=(faq_counter.zero? ? 'in' : nil) role="tabpanel" aria-labelledby="heading_#{dom_id(faq)}"]
+    .panel-body
+      = faq.answer

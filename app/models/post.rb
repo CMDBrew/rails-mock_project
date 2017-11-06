@@ -3,7 +3,7 @@ class Post < ApplicationRecord
   extend FriendlyId
   friendly_id :slug_candidates, use: %i[slugged finders]
 
-  before_save :update_published_date
+  before_create :update_published_date
 
   validates :title,
             presence: true
