@@ -5,4 +5,4 @@
         = "#{faq_counter + 1}. #{faq.question}"
   .panel-collapse.collapse[id=dom_id(faq) class=(faq_counter.zero? ? 'in' : nil) role="tabpanel" aria-labelledby="heading_#{dom_id(faq)}"]
     .panel-body
-      = faq.answer
+      == faq.answer

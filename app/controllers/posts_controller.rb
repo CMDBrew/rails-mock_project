@@ -7,11 +7,13 @@ class PostsController < ApplicationController
     @posts = Post.published
     filter_posts
     @posts = @posts.by_published_date.
-             paginate(page: params[:page], per_page: 9)
+             paginate(page: params[:page], per_page: 9).
+             decorate
   end
 
   def show
-    @post = Post.published.friendly.find params[:id]
+    @post = Post.published.
+            friendly.find(params[:id]).decorate
   end
 
   private

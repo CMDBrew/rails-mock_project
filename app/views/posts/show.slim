@@ -21,6 +21,6 @@ section[id='posts']
               | &nbsp;|&nbsp;
               = t('.categories', categories: @post.category_list)
             article
-              = @post.content
+              == @post.content
       .col-md-4
         = render 'aside'
