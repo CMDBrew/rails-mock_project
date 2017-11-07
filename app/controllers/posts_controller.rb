@@ -35,7 +35,7 @@ class PostsController < ApplicationController
     @posts =
       case params[:range]
       when 'past' then @posts.past
-      else @posts.recent.published_in Date.parse(params[:date])
+      else @posts.recent.published_in Time.zone.parse(params[:date])
       end
   end
 

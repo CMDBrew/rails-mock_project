@@ -6,7 +6,9 @@ abort('The Rails environment is running in production mode!') if Rails.env.produ
 require 'spec_helper'
 require 'rspec/rails'
 
-Dir.glob(Rails.root.join('spec', '{support,shared_examples}', '**', '*.rb')) { |f| require f }
+Dir.glob(Rails.root.join('spec', '{helper,support,shared_examples}', '**', '*.rb')) do |f|
+  require f
+end
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in

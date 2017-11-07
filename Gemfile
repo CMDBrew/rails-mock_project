@@ -36,9 +36,7 @@ gem 'will_paginate-bootstrap'
 gem 'devise'
 # Use CB ActiveAdmin for default backend
 gem 'activeadmin', '~> 1.0.0'
-gem 'material_active_admin',
-    git: "https://#{ENV['GITHUB_API_TOKEN']}:x-oauth-basic@github.com/cleverbanana/cl0000-cb06-cb-backend-theme.git",
-    tag: '1.0.3pre'
+gem 'material_active_admin', git: 'https://github.com/cleverbanana/cl0000-cb06-cb-backend-theme.git', tag: '1.0.4pre'
 
 # Use fontawesome for default icons
 gem 'font-awesome-rails'
@@ -108,8 +106,8 @@ group :test do
   # Use RSpec as Testing Framework
   gem 'rails-controller-testing'
   gem 'rspec-rails', '~> 3.6'
-  # Use FactoryGirl to generate fake data
-  gem 'factory_girl_rails', '~> 4.0'
+  # Use FactoryBot to generate fake data
+  gem 'factory_bot_rails'
   # Browser testing
   gem 'capybara'
   # gem 'capybara-webkit', '~> 1.14.0'
