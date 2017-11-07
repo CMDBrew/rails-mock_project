@@ -2,7 +2,9 @@
   .thumbnail
     = holder_tag '300x150', 'Sample Image', '', class: 'img-responsive'
     .caption
+      h4= link_to post.title, post
+      p.text-muted= post.category_list
+      br/
       p= post.content
-      p
-        a.btn.btn-primary[href="#" role="button"]
-          | Button
+      br/
+      p.text-muted= post.published_date

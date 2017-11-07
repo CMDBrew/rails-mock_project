@@ -1,0 +1,26 @@
+section.jumbotron[id='hero']
+  .container
+    .row.text-center
+      .col-md-12
+        h1= t('.title')
+
+section[id='posts']
+  .container
+    .row
+      .col-md-8
+        .row
+          .col-md-12
+            ol.breadcrumb
+              li= link_to t('posts.index.title'), posts_path
+              li.active= @post.title
+          .col-md-12
+            = holder_tag '800x400', 'Sample Image', '', class: 'img-responsive'
+            h2= @post.title
+            p.text-muted
+              = t('.published_date', date: @post.published_date)
+              | &nbsp;|&nbsp;
+              = t('.categories', categories: @post.category_list)
+            article
+              = @post.content
+      .col-md-4
+        = render 'aside'

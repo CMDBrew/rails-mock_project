@@ -48,8 +48,10 @@ en:
       title: FAQs
 
   posts:
-    index:
+    shared: &shared
       title: News
+    index:
+      <<: *shared
     aside:
       archives:
         title: Archives
@@ -57,3 +59,7 @@ en:
       categories:
         title: Categories
         all: Uncategorised
+    show:
+      <<: *shared
+      published_date: 'Published on: %{date}'
+      categories: 'Categories: %{categories}'
