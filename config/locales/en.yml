@@ -11,6 +11,7 @@ en:
       pricing/basic: Basic Package
       pricing/advance: Advance Package
       faqs: FAQS
+      posts: NEWS
     footer:
       copyright: '%{year} © Clever Banana Studios Inc. All Rights Reserved.'
 
@@ -45,3 +46,14 @@ en:
   faqs:
     index:
       title: FAQs
+
+  posts:
+    index:
+      title: News
+    aside:
+      archives:
+        title: Archives
+        past: All Past News
+      categories:
+        title: Categories
+        all: Uncategorised

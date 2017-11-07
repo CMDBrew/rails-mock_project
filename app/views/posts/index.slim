@@ -1,0 +1,19 @@
+section.jumbotron[id='hero']
+  .container
+    .row.text-center
+      .col-md-12
+        h1= t('.title')
+
+section[id='posts']
+  .container
+    .row
+      .col-md-8
+        .row
+          = render @posts
+        .row
+          .col-md-12
+            .text-center
+              = will_paginate @posts, renderer: BootstrapPagination::Rails,\
+                inner_window: 1, outer_window: 1
+      .col-md-4
+        = render 'aside'

@@ -6,7 +6,8 @@ Rails.application.routes.draw do
     get code, to: 'errors#show', code: code
   end
 
-  resources :faqs, only: %i[index]
+  resources :faqs,  only: %i[index]
+  resources :posts, only: %i[index show]
 
   get '/pricing' => 'home#pricing', as: :pricing
 

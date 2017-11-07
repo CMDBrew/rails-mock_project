@@ -1,0 +1,34 @@
+aside
+  .panel.panel-default
+    .panel-heading.text-uppercase
+      = t('.archives.title')
+    .panel-body
+      ul
+        - @dates.each do |date|
+            li
+              = link_to posts_path(date: date) do
+                = fa_icon('chevron-right')
+                | &nbsp;
+                = date
+        li
+          = link_to posts_path(range: 'past') do
+            = fa_icon('chevron-right')
+            | &nbsp;
+            = t('.archives.past')
+
+  .panel.panel-default
+    .panel-heading.text-uppercase
+      = t('.categories.title')
+    .panel-body
+      ul
+        - @categories.each do |category|
+          li
+            = link_to posts_path(category: category.name) do
+              = fa_icon('chevron-right')
+              | &nbsp;
+              = category.name
+        li
+          = link_to posts_path(tag: nil) do
+            = fa_icon('chevron-right')
+            | &nbsp;
+            = t('.categories.all')
