@@ -1,0 +1,42 @@
+section.jumbotron[id='hero']
+  .container
+    .row.text-center
+      .col-md-12
+        h1= t('.hero.title')
+
+section[id='contact-info']
+  .container
+    .row
+      .col-md-12
+        h2= t('.contact_info.title')
+    .row
+      .col-md-5
+        p= t('.form.description')
+        = simple_form_for @contact do |f|
+          = f.input :name,
+                    label: false
+          = f.input :email,
+                    label: false
+          = f.input :message,
+                    label: false,
+                    input_html: { rows: 5 }
+          = f.button :submit,
+                     class: 'btn-primary'
+      .col-md-7
+        strong= t('.info.contact.title')
+        ul
+          li
+            = fa_icon('phone')
+            | &nbsp;
+            = t('.info.contact.phone')
+          li
+            = fa_icon('envelope')
+            | &nbsp;
+            = t('.info.contact.email')
+          li
+            = fa_icon('map-marker')
+            | &nbsp;
+            = t('.info.contact.address')
+        br/
+        strong= t('.info.hours.title')
+        p== t('.info.hours.body')

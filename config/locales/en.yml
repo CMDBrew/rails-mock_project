@@ -1,4 +1,9 @@
 en:
+  helpers:
+    submit:
+      contact:
+        create: Submit
+
   activerecord:
     errors:
       format: format not valid
@@ -12,6 +17,7 @@ en:
       pricing/advance: Advance Package
       faqs: FAQS
       posts: NEWS
+      contact: CONTACT
     footer:
       copyright: '%{year} © Clever Banana Studios Inc. All Rights Reserved.'
 
@@ -63,3 +69,21 @@ en:
       <<: *shared
       published_date: 'Published on: %{date}'
       categories: 'Categories: %{categories}'
+
+  contacts:
+    new:
+      hero:
+        title: Contact Us
+      contact_info:
+        title: Let’s Get Started!
+      form:
+        description: Ready to talk about your project? Need a quote or just want to bounce ideas off us? We’d love to help. Bring us your ideas, lists or drawings - we’ll put the kettle on.
+      info:
+        contact:
+          title: Contact Information
+          phone: (778) 806-1108
+          email: Email Us
+          address: 5050 Kingsway, Unit 412, Burnaby, BC, V5H4H2
+        hours:
+          title: Office Hours
+          body: Monday-Friday, 9:30AM - 5:30PM </br> We are closed on Canadian Holidays
