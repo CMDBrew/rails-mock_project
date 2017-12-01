@@ -72,6 +72,7 @@ en:
 
   contacts:
     new:
+      email: Email Us
       hero:
         title: Contact Us
       contact_info:
@@ -82,8 +83,10 @@ en:
         contact:
           title: Contact Information
           phone: (778) 806-1108
-          email: Email Us
+          email: dev@cleverbnana.com
           address: 5050 Kingsway, Unit 412, Burnaby, BC, V5H4H2
         hours:
           title: Office Hours
           body: Monday-Friday, 9:30AM - 5:30PM </br> We are closed on Canadian Holidays
+    create:
+      success: Successfully Sent!

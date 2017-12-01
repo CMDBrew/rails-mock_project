@@ -8,9 +8,9 @@ class ContactsController < ApplicationController
     @contact = Contact.new contact_params
     if @contact.save
       @contact = Contact.new
-      flash[:notice] = 'Successfully Sent!'
+      flash.now[:success] = t('.success')
     else
-      flash[:error] = @contact.errors.full_messages&.to_sentence
+      flash.now[:error] = @contact.errors.full_messages&.to_sentence
     end
     render 'new'
   end

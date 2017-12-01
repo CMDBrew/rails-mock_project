@@ -12,10 +12,7 @@ section[id='contact-info']
     .row
       .col-md-5
         p= t('.form.description')
-        - if flash[:error]
-          .alert.alert-danger= flash[:error]
-        - elsif flash[:notice]
-          .alert.alert-success= flash[:notice]
+        = flash_messages
         = simple_form_for @contact do |f|
           = f.input :name,
                     label: false
@@ -32,15 +29,15 @@ section[id='contact-info']
           li
             = fa_icon('phone')
             | &nbsp;
-            = t('.info.contact.phone')
+            = phone_link(t('.info.contact.phone'))
           li
             = fa_icon('envelope')
             | &nbsp;
-            = t('.info.contact.email')
+            = email_link(t('.info.contact.email'))
           li
             = fa_icon('map-marker')
             | &nbsp;
-            = t('.info.contact.address')
+            = address_link(t('.info.contact.address'))
         br/
         strong= t('.info.hours.title')
         p== t('.info.hours.body')
