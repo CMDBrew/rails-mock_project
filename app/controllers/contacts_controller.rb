@@ -6,7 +6,12 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new contact_params
-    @contact.save
+    if @contact.save
+      @contact = Contact.new
+      flash[:notice] = 'Successfully Sent!'
+    else
+      flash[:error] = @contact.errors.full_messages&.to_sentence
+    end
     render 'new'
   end
 
