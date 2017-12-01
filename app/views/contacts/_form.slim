@@ -1,0 +1,12 @@
+p= t('.description')
+= flash_messages
+= simple_form_for @contact, remote: true do |f|
+  = f.input :name,
+            label: false
+  = f.input :email,
+            label: false
+  = f.input :message,
+            label: false,
+            input_html: { rows: 5 }
+  = f.button :submit,
+             class: 'btn-primary'

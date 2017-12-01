@@ -6,13 +6,7 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new contact_params
-    if @contact.save
-      @contact = Contact.new
-      flash.now[:success] = t('.success')
-    else
-      flash.now[:error] = @contact.errors.full_messages&.to_sentence
-    end
-    render 'new'
+    @contact.save ? contact_saved : contact_error
   end
 
   private
@@ -21,6 +15,23 @@ class ContactsController < ApplicationController
     params.fetch(:contact, {}).permit(
       :name, :email, :message
     )
+  end
+
+  def contact_saved
+    @contact = Contact.new
+    flash.now[:success] = t('.success')
+    respond_to do |format|
+      format.html { render 'new' }
+      format.js { render layout: false }
+    end
+  end
+
+  def contact_error
+    flash.now[:error] = @contact.errors.full_messages&.to_sentence
+    respond_to do |format|
+      format.html { render 'new' }
+      format.js { render 'create_error', layout: false }
+    end
   end
 
 end

@@ -77,8 +77,6 @@ en:
         title: Contact Us
       contact_info:
         title: Let’s Get Started!
-      form:
-        description: Ready to talk about your project? Need a quote or just want to bounce ideas off us? We’d love to help. Bring us your ideas, lists or drawings - we’ll put the kettle on.
       info:
         contact:
           title: Contact Information
@@ -90,3 +88,7 @@ en:
           body: Monday-Friday, 9:30AM - 5:30PM </br> We are closed on Canadian Holidays
     create:
       success: Successfully Sent!
+    create_success:
+      msg: Thank you for contacitng us, our response time is usually 24 to 48 hours or within 2 business days.</br></br>For emergency inquiries, please call our office number during our operation hours.
+    form:
+      description: Ready to talk about your project? Need a quote or just want to bounce ideas off us? We’d love to help. Bring us your ideas, lists or drawings - we’ll put the kettle on.
