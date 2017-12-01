@@ -12,6 +12,10 @@ section[id='contact-info']
     .row
       .col-md-5
         p= t('.form.description')
+        - if flash[:error]
+          .alert.alert-danger= flash[:error]
+        - elsif flash[:notice]
+          .alert.alert-success= flash[:notice]
         = simple_form_for @contact do |f|
           = f.input :name,
                     label: false
