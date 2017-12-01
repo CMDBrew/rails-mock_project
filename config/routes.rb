@@ -10,9 +10,9 @@ Rails.application.routes.draw do
   resources :posts,    only: %i[index show]
   resources :contacts, only: %i[new create]
 
-  get '/pricing' => 'home#pricing', as: :pricing
+  get :pricing, to: 'home#pricing', as: :pricing
 
-  match 'contacts', to: 'contacts#new', via: %i[get]
+  match :contacts, to: 'contacts#new', via: %i[get]
 
   root 'home#index'
 end
