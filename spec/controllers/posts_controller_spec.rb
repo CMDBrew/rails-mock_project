@@ -25,20 +25,22 @@ RSpec.describe PostsController, type: :controller do
     end
 
     it 'should order posts by published_date' do
-      post1 = create(:post, published: true, published_date: Time.zone.now - 3.hours).decorate
-      post2 = create(:post, published: true, published_date: Time.zone.now - 2.hours).decorate
-      post3 = create(:post, published: true, published_date: Time.zone.now).decorate
+      post1 = create(:post, published: true)
+      post2 = create(:post, published: true)
+      post3 = create(:post, published: true)
 
       get :index
-      expect(assigns(:posts)).to eq([post3, post2, post1])
+      expect(assigns(:posts).pluck(:published_date)).to(
+        match_array([post3.published_date, post2.published_date, post1.published_date])
+      )
     end
 
     it 'should not include future posts' do
-      create(:post, published: true, published_date: Time.zone.now + 1.hour).decorate
-      post2 = create(:post, published: true, published_date: Time.zone.now - 2.hours).decorate
+      create(:post, published: true, published_date: Time.zone.now + 1.day).decorate
+      post2 = create(:post, published: true, published_date: Time.zone.now).decorate
 
       get :index
-      expect(assigns(:posts)).to eq([post2])
+      expect(assigns(:posts).pluck(:id)).to match_array([post2.id])
     end
 
     include_examples 'post aside'
