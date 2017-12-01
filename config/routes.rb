@@ -12,5 +12,7 @@ Rails.application.routes.draw do
 
   get '/pricing' => 'home#pricing', as: :pricing
 
+  match 'contacts', to: 'contacts#new', via: %i[get]
+
   root 'home#index'
 end
