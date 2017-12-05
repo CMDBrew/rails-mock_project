@@ -65,6 +65,8 @@ en:
       categories:
         title: Categories
         all: Uncategorised
+      subscribers:
+        title: Subscribe our newsletter
     show:
       <<: *shared
       published_date: 'Published on: %{date}'
@@ -92,3 +94,7 @@ en:
       msg: Thank you for contacitng us, our response time is usually 24 to 48 hours or within 2 business days.</br></br>For emergency inquiries, please call our office number during our operation hours.
     form:
       description: Ready to talk about your project? Need a quote or just want to bounce ideas off us? We’d love to help. Bring us your ideas, lists or drawings - we’ll put the kettle on.
+
+  subscribers:
+    create:
+      success: Thank you form subscribing!

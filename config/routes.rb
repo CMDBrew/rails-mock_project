@@ -6,9 +6,13 @@ Rails.application.routes.draw do
     get code, to: 'errors#show', code: code
   end
 
-  resources :faqs,     only: %i[index]
-  resources :posts,    only: %i[index show]
-  resources :contacts, only: %i[new create]
+  resources :faqs,        only: %i[index]
+  resources :posts,       only: %i[index show]
+  resources :contacts,    only: %i[new create]
+
+  constraints format: :js do
+    resources :subscribers, only: %i[create]
+  end
 
   get :pricing, to: 'home#pricing', as: :pricing
 

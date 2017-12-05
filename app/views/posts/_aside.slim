@@ -32,3 +32,9 @@ aside
             = fa_icon('chevron-right')
             | &nbsp;
             = t('.categories.all')
+
+  .panel.panel-default
+    .panel-heading.text-uppercase
+      = t('.subscribers.title')
+    .panel-body
+      = render 'subscribers/form'

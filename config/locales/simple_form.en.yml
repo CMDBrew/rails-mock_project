@@ -16,6 +16,12 @@ en:
         name: Full Name*
         email: Email Address*
         message: Message
+      subscriber:
+        email: Email Address*
+
+    hints:
+      subscriber:
+        email: Duis vehicula id mi et fringilla. Morbi a sapien nec orci.
 
     # Examples
     # labels:

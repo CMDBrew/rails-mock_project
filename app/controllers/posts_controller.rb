@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-  before_action :find_dates, :find_categories
+  before_action :find_dates, :find_categories, :init_subscriber
   before_action :set_default_params, only: %i[index]
 
   def index
@@ -54,6 +54,10 @@ class PostsController < ApplicationController
     post = Post.by_published_date.first
     date = post.present? ? post.published_date : Time.zone.now
     date.strftime('%B, %Y')
+  end
+
+  def init_subscriber
+    @subscriber = Subscriber.new
   end
 
 end
