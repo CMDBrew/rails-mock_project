@@ -19,7 +19,8 @@ class Subscriber
   end
 
   def create
-    valid?
+    return false unless valid?
+    notify_admin
   end
 
   def self.create(attributes = {})
@@ -30,6 +31,10 @@ class Subscriber
   alias save create
 
   private
+
+  def notify_admin
+    SubscriberMailer.notify_admin(self).deliver_now
+  end
 
   def attributes=(attributes)
     attributes.each do |name, value|

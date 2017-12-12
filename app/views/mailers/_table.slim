@@ -1,0 +1,10 @@
+table[style="width: 100%; border-collapse: collapse; border: 1px solid #eee; text-align: left;"]
+  thead
+    tr[style="background: #ffb600; color: white;"]
+      th[style="white-space:nowrap; padding: 10px 15px;"] FIELD
+      th[style="padding: 10px 15px;"] VALUE
+  tbody
+    - fields.each do |field|
+      tr[style="border-bottom: 1px solid #eee;"]
+        td[style="white-space:nowrap; padding: 10px 15px;"]= field.humanize
+        td[style="padding: 10px 15px;"]= resource.send(field.to_sym)
