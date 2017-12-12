@@ -1,13 +1,7 @@
 = flash_messages
 = simple_form_for @subscriber, remote: true do |f|
-  = f.input :email,
-            label: false
-  = f.button :button do
-    = fa_icon('chevron-right')
-
-/ = simple_form_for @subscriber, remote: true do |f|
-/     = f.input :email, label: false, wrapper: 'vertical_input_group' do
-/       = f.input_field :email, class: 'form-control'
-/       .input-group-btn
-/         = f.button :button, wrapper: false do
-/           = fa_icon('chevron-right')
+    = f.input :email, label: false, wrapper: 'vertical_input_group' do
+      = f.input_field :email, class: 'form-control'
+      .input-group-btn
+        = f.button :button, wrapper: false do
+          = fa_icon('chevron-right')
